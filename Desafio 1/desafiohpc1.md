@@ -2,7 +2,7 @@
 
 ## 1. Área escolhida e utilização de HPC
 
-A área de aplicação escolhida foi a **Computação Gráfica**
+A área de aplicação escolhida foi a **Computação Gráfica**, focando na renderização de imagens.
 
 A renderização é o processo de transformar dados estruturais e matemáticos como modelos tridimensionais, coordenadas, texturas e informações de luz em uma imagem 2D, considerando elementos como geometria, iluminação, materiais, sombras e reflexos.
 
