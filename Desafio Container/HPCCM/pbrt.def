@@ -1,0 +1,32 @@
+BootStrap: docker
+From: ubuntu:22.04
+%post
+    . /.singularity.d/env/10-docker*.sh
+
+%post
+    apt-get update -y
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        build-essential \
+        ca-certificates \
+        cmake \
+        git \
+        libgl1-mesa-dev \
+        libx11-dev \
+        libxcursor-dev \
+        libxi-dev \
+        libxinerama-dev \
+        libxrandr-dev \
+        zlib1g-dev
+    rm -rf /var/lib/apt/lists/*
+
+%post
+    cd /
+    mkdir -p /pbrt
+    cd /pbrt
+
+%runscript
+    cd /pbrt
+    exec /bin/bash "$@"
+
+
+
